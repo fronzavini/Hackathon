@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>MENU INICIAL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+    <header>
+        <div id="sair">
+            <p>Sair</p>
+        </div>
+        <section id="topo">
+            <div id="logo-ifc">
+                <img src="imagens/Logo-IFC.png" alt=""/>
+            </div>
+            <nav id="menuTopo">
+                <h1>Labs</h1>
+                <hr class="linha-menu"></hr>
+                <h3>Fulano</h3>
+            </nav>
+            <div id="perfil">
+                <img src="imagens/img-perfil.png" alt=""/>
+            </div>
+        </section>
+    </header>
+    <main id="secao-principal">
+        <section id="secao-lateral">
+            <div class="opcao-lateral">
+                <a href="#">
+                    Calendário
+                    <img src="imagens/img-calendario.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="#">
+                    Notificações
+                    <img src="imagens/img-notificacao.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="#">
+                    Software
+                    <img src="imagens/img-software.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+        </section>
+
+        <section id="secao-calendario">
+        <!-- CRIAÇÃO CALENDÁRIO -->
+        <div id="area-calendario">
+            <div id="calendar"></div>
+        </div>
+        </section>
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="scr-calendario.js"></script>
+</body>
