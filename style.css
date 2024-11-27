@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+#logo-ifc img{
+    max-width: 16vh;
+    border-radius: 10px;
+}
+#perfil img{
+    max-width: 13vh;
+    border: black solid 0.5vh;
+    border-radius: 100vh;
+    padding: 0.25vh;
+}
+a{
+    text-decoration: none;
+}
+#topo{
+    background-color: #D9D9D9;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 1vh;
+    border: 0;
+}
+#topo div{
+    padding: 0 20vh;
+}
+#menuTopo{
+    padding: 1vh;
+}
+#menuTopo h1{
+    font-size: 5vh;
+}
+#menuTopo h3{
+    font-size: 4vh;
+}
+.linha-menu{
+    border: black solid 0.25vh;
+    width: 40vh;
+    margin: 0.25vh;
+}
+#sair{
+    background-color: #D9D9D9; 
+    display: flex;
+    justify-content: right;
+}
+#sair p{
+    text-align: center; 
+    padding: 0.5vh 2vh; 
+    font-size: 2.5vh;
+    border: black solid 0.5vh;
+    border-radius: 2vh;
+    margin: 0.5vh 1vh 0vh 1vh;
+    max-width: 20%;
+}
+
+#menu-calendario{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 1em;
+}
+#area-calendario{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+#calendar{
+    display: grid;
+    grid-template-columns: repeat (7, 1fr);
+    grid-template-rows: auto auto 1fr;
+    gap: 5px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td, th{
+    padding: 1.5em;
+    text-align: center;
+    border: #D9D9D9 solid 0.2em;
+}
+td:hover{
+    background-color: #45B841;
+}
+#month-year{
+    text-align: center;
+}
+#botao-mes button{
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    background-color: transparent;
+    vertical-align: middle;
+}
+#botao-mes{
+    border: #D9D9D9 solid 0.2em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+}
+#botao-mes #b1{
+    border-top: 0px solid #D9D9D9;
+    border-bottom: 20px solid #D9D9D9;
+    margin-right: 0.5em;
+}
+#botao-mes #b2{
+    border-top: 20px solid #D9D9D9;
+    border-bottom: 0px solid #D9D9D9;
+}
+#secao-principal{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 1em;
+}
+#secao-calendario{
+    margin: 0 auto;
+}
+#secao-lateral{
+    min-width: 300px;
+    background-color: #45B841;
+    min-height: 80vh;
+    position: sticky;
+    margin-bottom: -10%;
+    padding: 0 1.5em;
+}
+.opcao-lateral a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    margin: 2em 1em;
+    border-radius: 0.5em;
+    background-color: white;
+}
+.opcao-lateral img{
+    margin-top: 0.5em;
+}
