@@ -100,8 +100,9 @@ tr{
 }
 
 td:hover{
-    background-color: #45B841;
+    background-color: #45b8417a;
 }
+
 #month-year{
     text-align: center;
 }
@@ -172,6 +173,10 @@ td:hover{
     white-space: nowrap; 
 }
 
+#hora:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+
 #labs{
     border: transparent;
     font-size: 1em;
@@ -218,4 +223,8 @@ td:hover{
 .botao-troca:hover{
     background-color: #45B841;
     transition: 0.25s;
+}
+
+#i0j0{
+    background-color: red;
 }

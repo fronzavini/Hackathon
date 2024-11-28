@@ -40,7 +40,7 @@ let html = `<section id="menu-calendario"><h2 id="month-year">${monthNames[month
         day.addEventListener('click', function () {
             const date = this.getAttribute('data-date');
             // Redireciona para a página desejada
-            window.location.href = `horarios-aluno.html`;
+            window.location.href = `horarios-administrador.html`;
         });
     });
 }

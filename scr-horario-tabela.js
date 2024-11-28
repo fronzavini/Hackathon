@@ -20,7 +20,7 @@ for(let i=0; i < 11; i++) {
             html += `<td class="horario-celula" id="hora">${horas[i]}</td>`;
         }
         else{
-            html += `<td class="horario-celula"></td>`;
+            html += `<td class="horario-celula" id="i${i}j${j-1} "></td>`;
         }
     }
     html += `</tr>`;
@@ -31,16 +31,3 @@ horario.innerHTML = html;
 }
 
 criarHorario();
-/*
-document.addEventListener('mouseover', function(event){
-    if (event.target.tagName=== 'TD'){
-    event.target.classList.add('highlight');
-    }
-});
-
-document.addEventListener('mouseout', function(event){
-    if (event.target.tagName==='TD') {
-    event.target.classList.remove('highlight');
-    }
-});
-*/
