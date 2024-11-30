@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Notificações - Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div id="sair">
+            <p>Sair</p>
+        </div>
+        <section id="topo">
+            <div id="logo-ifc">
+                <img src="imagens/Logo-IFC.png" alt=""/>
+            </div>
+            <nav id="menuTopo">
+                <h1>Labs</h1>
+                <hr class="linha-menu"></hr>
+                <h3>Fulano [Administrador]</h3>
+            </nav>
+            <div id="perfil">
+                <img src="imagens/img-perfil.png" alt=""/>
+            </div>
+        </section>
+    </header>
+    <div class="filtro-notificacao">
+            <select name="notificacoes" id="notificacoes-filtro">
+                <option value="Solicitação de reserva" class="select">Solicitação de reserva</option>
+                <option value="Cancelamente de reserva" class="select">Cancelamento de reserva</option>
+                <option value="Solicitação de troca" class="select">Solicitação de troca</option>
+            </select>
+    </div>
+    <main id="secao-principal">
+        <section id="secao-lateral" style="margin-top: -3.35em; height: 110vh;">
+            <div class="opcao-lateral">
+                <a href="index-administrador.html">
+                    Calendário
+                    <img src="imagens/img-calendario.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="notificacao-admin.html">
+                    Notificações
+                    <img src="imagens/img-notificacao.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="#">
+                    Software
+                    <img src="imagens/img-software.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+        </section>
+
+        <section id="secao-notificacao">
+        <!-- CRIAÇÃO Notificações -->
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">⤿</span>  <span class="tipo-notificacao">Solicitação de reserva</span></p>
+            <p class="texto-notificacao">O professor [Hylson] deseja reserva a sala [A03]<br>no dia [12/11/2024] as [09:45]</p>
+            <input type="button" value="Confirmar" name="confirm-troca" class="botao-troca">
+            <input type="button" value="Recusar" name="recusar-troca" class="botao-troca">
+            <hr class="linha-notificacao">
+         </div>
+
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">⤿</span>  <span class="tipo-notificacao">Cancelamento de reserva</span></p>
+            <p class="texto-notificacao">
+                O professor [Hermano] deseja cancelar sua reserva<br>
+                da sala [A04] do dia [03/11/2024]
+            </p>
+            <input type="button" value="Confirmar" name="confirm-troca" class="botao-troca">
+            <input type="button" value="Recusar" name="recusar-troca" class="botao-troca">
+            <hr class="linha-notificacao">
+         </div>
+
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">⤿</span>  <span class="tipo-notificacao">Solicitação de troca</span></p>
+            <p class="texto-notificacao">
+                O professor [Uriarte] solicitou uma troca de horários<br> 
+                com o professor [Hermano] da sala [A04] no dia [00/00/0000] as [00:00]
+            </p>
+            <input type="button" value="Confirmar" name="confirm-troca" class="botao-troca">
+            <input type="button" value="Recusar" name="recusar-troca" class="botao-troca">
+            <hr class="linha-notificacao">
+         </div>
+        </section>
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>

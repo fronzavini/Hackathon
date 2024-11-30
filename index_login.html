@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const radioButtons = document.querySelectorAll("input[name='tipo_usuario']");
+        const alunoFields = document.getElementById("aluno-fields");
+        const servidorAdminFields = document.getElementById("servidor-admin-fields");
+
+        // Função para atualizar os campos exibidos
+        function updateFields() {
+            alunoFields.style.display = "none";
+            servidorAdminFields.style.display = "none";
+
+            if (document.getElementById("aluno").checked) {
+                alunoFields.style.display = "block";
+            } else if (document.getElementById("servidor").checked || document.getElementById("administrador").checked) {
+                servidorAdminFields.style.display = "block";
+            }
+        }
+
+        // Adiciona o evento de clique para cada botão de rádio
+        radioButtons.forEach((radio) => {
+            radio.addEventListener("change", updateFields);
+        });
+    });
+</script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style_login.css') }}">
+    <title>Gerenciador de Laboratórios</title>
+    <link href="style_login.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="signup-section">
+            <header>Criar Conta</header>
+
+
+            <form action="/register" method="POST">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Senha" required>
+            
+                <div class="radio-group">
+                    <input type="radio" id="aluno" name="tipo_usuario" value="aluno">
+                    <label for="aluno">Aluno</label>
+            
+                    <input type="radio" id="servidor" name="tipo_usuario" value="servidor">
+                    <label for="servidor">Servidor</label>
+            
+                    <input type="radio" id="administrador" name="tipo_usuario" value="administrador">
+                    <label for="administrador">Administrador</label>
+                </div>
+            
+                <div id="aluno-fields" class="conditional-fields">
+                    <input type="text" name="matricula" placeholder="Matrícula">
+                    <input type="text" name="campus" placeholder="Campus">
+                </div>
+            
+                <div id="servidor-admin-fields" class="conditional-fields">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="campus" placeholder="Campus">
+                </div>
+            
+                <button type="submit" class="btn">Criar</button>
+            </form>
+
+        </div>
+
+        <div class="login-section">
+            <header>Entrar</header>
+
+
+            <form action="/login" method="POST">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <a href="#">Esqueceu a senha?</a>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/script_login.js') }}"></script>
+</body>
+
+</html>

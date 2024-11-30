@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Notificações - Professor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div id="sair">
+            <p>Sair</p>
+        </div>
+        <section id="topo">
+            <div id="logo-ifc">
+                <img src="imagens/Logo-IFC.png" alt=""/>
+            </div>
+            <nav id="menuTopo">
+                <h1>Labs</h1>
+                <hr class="linha-menu"></hr>
+                <h3>Fulano[Professor]</h3>
+            </nav>
+            <div id="perfil">
+                <img src="imagens/img-perfil.png" alt=""/>
+            </div>
+        </section>
+    </header>
+    <div class="filtro-notificacao">
+        <select name="notificacoes" id="notificacoes-filtro">
+            <option value="Solicitação negada" class="select">Solicitação negada</option>
+            <option value="Cancelamente confirmada" class="select">Solicitação confirmada</option>
+            <option value="Solicitação de troca" class="select">Solicitação de troca</option>
+        </select>
+    </div>
+    <main id="secao-principal">
+        <section id="secao-lateral" style="margin-top: -3.35em; height: 110vh;">
+            <div class="opcao-lateral">
+                <a href="index-professor.html">
+                    Calendário
+                    <img src="imagens/img-calendario.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="notificacao-prof.html">
+                    Notificações
+                    <img src="imagens/img-notificacao.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+            <div class="opcao-lateral">
+                <a href="#">
+                    Software
+                    <img src="imagens/img-software.png" alt="" width="64px" height="64px">
+                </a>
+            </div>
+        </section>
+
+        <section id="secao-notificacao">
+        <!-- CRIAÇÃO Notificações -->
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">X</span>  <span class="tipo-notificacao">Solicitação negada</span></p>
+            <p class="texto-notificacao">Sua reserva para a sala D04(variavel) foi negada</p>
+            <hr class="linha-notificacao">
+         </div>
+
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">✓</span>  <span class="tipo-notificacao">Solicitação confirmada</span></p>
+            <p class="texto-notificacao">Sua reserva para a sala D04(variavel) foi confirmada</p>
+            <hr class="linha-notificacao">
+         </div>
+
+         <div class="notificacao">
+            <p><span style="font-size: 2.5em;">⤿</span>  <span class="tipo-notificacao">Solicitação de troca</span></p>
+            <p class="texto-notificacao">O professor [Fulano] solicitou uma troca de horários da sala [D04]</p>
+            <input type="button" value="Confirmar" name="confirm-troca" class="botao-troca">
+            <input type="button" value="Recusar" name="recusar-troca" class="botao-troca">
+            <hr class="linha-notificacao">
+         </div>
+        </section>
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
