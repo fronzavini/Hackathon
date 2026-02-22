@@ -27,7 +27,7 @@ O projeto demonstra a capacidade de desenvolver uma solução **full-stack** sob
 
 ---
 
-## ✨ Funcionalidades e principais diferenciais
+## ✨ Objetivos
 
 - 📅 Visualização de horários disponíveis por ambiente  
 - 🏷️ Identificação clara dos espaços reservados e livres  
@@ -45,7 +45,7 @@ O projeto demonstra a capacidade de desenvolver uma solução **full-stack** sob
 
 O desenvolvimento foi dividido em etapas estratégicas para otimizar o tempo disponível:
 
-1. Definição rápida do escopo (**MVP**)  
+1. Definição rápida do escopo   
 2. Modelagem inicial do banco de dados  
 3. Criação das rotas no Flask  
 4. Implementação da lógica de reservas e verificação de conflitos  
@@ -72,15 +72,3 @@ Durante o Hackathon, desenvolvemos habilidades técnicas e comportamentais, como
 
 ---
 
-## 🚀 Possíveis melhorias futuras
-
-- Sistema de login e autenticação de usuários  
-- Controle de permissões (admin / usuário)  
-- Dashboard administrativo  
-- Relatórios de utilização dos ambientes  
-- Notificações por e-mail  
-- Integração com calendário externo  
-- Melhorias na interface e experiência do usuário  
-- Implementação de reservas recorrentes
-
----
