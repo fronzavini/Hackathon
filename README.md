@@ -68,7 +68,6 @@ Durante o Hackathon, desenvolvemos habilidades técnicas e comportamentais, como
 - Modelagem e persistência de dados  
 - Trabalho em equipe sob pressão  
 - Gestão eficiente de tempo  
-- Foco em entrega de **MVP funcional**
 
 ---
 
